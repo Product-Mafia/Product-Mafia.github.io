@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&family=Open+Sans&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    min-height: 100vh;
+}
+
+
+/* NAV */
+nav{
+    padding-top: 4.22rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+
+.nav__header{
+    display: flex;
+    align-items: center;
+}
+
+.nav__header > img{
+    width: 25px;
+    height: 33px;
+    object-fit: contain;
+    margin-right: 8px;
+}
+
+.nav__header > p{
+    color: #1380EC;
+    font-size: 22.59px;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: bolder;    
+}
+
+.nav__links{
+    display: flex;
+    justify-content: space-between;
+    /* width: 45%; */
+}
+
+.nav__link{
+    display: flex;
+    align-items: center;
+    margin: 0 1.4rem;
+}
+
+.nav__link > a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+
+
+}
+
+.mobile__img{
+    display: none ;
+}
+
+/* NAV MEDIA QUERY */
+@media screen and (max-width: 768px){
+    .nav__links{
+        width: 50%;
+        /* background: red; */
+    }
+
+    .nav__link{
+        margin: 0px 10px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    nav{
+        padding-top: 3.5em;
+        width: 90%;
+    }
+
+    .desktop__view{
+        display: none;
+    }
+
+    .nav__links{
+        width: fit-content;
+    }
+
+    .mobile__img{
+        display: block;
+    }
+  }
+
+
+.hero{
+    /* background: red;     */
+    padding: 9em 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.hero__header > h3{
+    font-size: 4rem;
+    font-family:  'Epilogue', sans-serif;
+    letter-spacing: -0.04em;
+    color: #04000C;
+    /* line-height: 130%; */
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.hero__header > h3 > span{
+    display: none;
+}
+
+.hero__subtitle{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #363C49;
+    margin-bottom: 63px;
+}
+
+.hero__button{
+    margin: 0 auto;
+}
+
+
+a{
+    text-decoration: none;          
+}
+
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 273px;
+    height: 81px;
+    background: #04000C;
+    border-radius: 4px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+}
+
+.button__logo > img{
+    margin-right: 14.78px;
+}
+
+.button__text > p:first-of-type{
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.button__text > p:last-of-type{
+    font-size: 18px;
+}
+
+/* HERO MEDIA QUERY */
+@media screen and (max-width: 425px) {
+    .hero{
+        padding: 9em 2em;
+    }
+
+    .hero__header > h3{
+        font-size: 2.5rem;
+    }
+
+    .hero__header > h3:last-of-type{
+        display: none;
+    }
+
+    .hero__header > h3 > span{
+        display: contents;
+    }
+
+    .hero__subtitle{
+        font-size: 16px;
+    }
+}
+
+
+/* FEATURES */
+.features{
+    min-height: 860px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feature{
+    text-align: center;
+    flex-grow: 1;
+}
+
+.feature > h3{
+    font-family: Epilogue;
+    font-size: 32px;
+    line-height: 100%;
+    color: #12232B;
+    margin-top: 5.5rem;
+    margin-bottom: 8px;
+}
+
+.feature > div > p{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #2B121B;
+}
+
+.feature > div {
+    margin-bottom: 4.5rem;
+}
+
+.feature > img{
+    width: 407px;
+}
+
+.features__board{
+    background: #C3C8FF;
+    flex: 0.33;
+    flex-grow: 5;
+}
+
+.features__timeTable{
+    background: #CBEFFF;
+    flex: 0.34;
+    flex-grow: 5;
+}
+
+.features__resourceLibrary{
+    background: #FFA5C5;
+    flex: 0.33;
+    flex-grow: 5;
+}
+
+/* FEATURES MEDIA QUERY */
+
+@media (max-width: 425px) {
+    .feature > img{
+        width: 290px;
+    }
+
+    .feature > h3{
+        font-size: 28px;
+    }
+}
+
+/* FOOTER */
+footer{
+    background: #000;
+    height: 21.25em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > p{
+    margin-bottom: 2.5em;
+    font-size: 18px;
+    font-family:'Open Sans', sans-serif ;
+    
+}
+
+footer > h3{
+    font-size: 3rem;
+    text-decoration-line: underline;
+    font-family: Epilogue;
+}
+
+/* FOOTER MEDIA QUERY */
+footer > h3{
+    font-size: 2rem;
+}
+
+footer > p{
+    font-size: 16px;
+}
