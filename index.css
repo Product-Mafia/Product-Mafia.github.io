@@ -26,6 +26,7 @@ nav{
 .nav__header{
     display: flex;
     align-items: center;
+    height: fit-content;
 }
 
 .nav__header > img{
@@ -33,6 +34,7 @@ nav{
     height: 33px;
     object-fit: contain;
     margin-right: 8px;
+    margin-bottom: 3px;
 }
 
 .nav__header > p{
