@@ -10,8 +10,104 @@
 
 .container{
     min-height: 100vh;
+    position: relative;
+    overflow-x: hidden  ;
 }
 
+.eyes2{
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    right: 5%;
+    top: 10%;
+}
+
+.fan{
+    position: absolute;
+    left: 10%;
+    right: 73.49%;
+    top: 20%;
+}
+
+.circle{
+    position: absolute;
+    /* background: red; */
+    width: 240px;
+    height: 240px;
+    top: 35%;
+    right: -2%;
+}
+
+.footer1{
+    position: absolute;
+    bottom: 0px;
+    margin-left: 15%;
+}
+
+.footer2{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    margin-right: 15%;
+}
+
+@media (max-width: 1300px) {
+    .eyes2, .fan, .circle, .footer1, .footer2{
+        display: none;
+    }
+}
+
+@media (max-width: 450px){
+    .eyes2{
+        display: block;
+        width: 119.63px;
+        height: 85.98px;
+        right: 0%;
+        top: 16%;
+    }
+
+    .fan{
+        display: block;
+        width: 50px;
+        height: 50px;
+        left: 0%;
+        top:10%;
+    }
+
+    .circle{
+        display: block;
+        top: 66%;
+        width: 108.1px;
+        height: 151.62px;
+        transform: rotate(29.72deg);
+    }
+
+    .footer1, .footer2{
+        display: block;
+        width: 199.85px;
+        height: 150px;
+        object-fit: contain;
+    }
+
+    .footer1{
+        /* background: red; */
+        left: -100px;
+    }
+
+    .footer2{
+        /* background: orange; */
+        right: -100px;
+    }
+
+
+
+}
+
+@media (max-width: 350px){
+    .eyes2{
+        top: 17%;
+    }
+}
 
 /* NAV */
 nav{
@@ -261,7 +357,7 @@ button{
 /* FOOTER */
 footer{
     background: #000;
-    height: 21.25em;
+    min-height: 21.25em;
     color: white;
     display: flex;
     flex-direction: column;
@@ -290,3 +386,4 @@ footer > h3{
 footer > p{
     font-size: 16px;
 }
+
