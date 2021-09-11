@@ -27,7 +27,22 @@
     left: 10%;
     right: 73.49%;
     top: 20%;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}
+
 
 .circle{
     position: absolute;
@@ -247,6 +262,7 @@ button{
     color: #fff;
     font-family: 'Open Sans', sans-serif;
     cursor: pointer;
+    border: none;
 }
 
 .button__logo > img{
@@ -310,8 +326,7 @@ button{
 
 .feature > div > p{
     font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-weight: 600;
+    font-weight: normal;
     font-size: 16px;
     color: #2B121B;
 }
@@ -351,6 +366,20 @@ button{
 
     .feature > h3{
         font-size: 28px;
+    }
+
+    .feature > div > p{
+        font-weight: 600;
+        font-size: 14.5px;
+        line-height: 24px;
+    }
+
+    .features > .feature > div{
+        padding: 0 10px;
+    }
+
+    .features > .feature > div:first-of-type{
+       padding: 0 15px;
     }
 }
 
