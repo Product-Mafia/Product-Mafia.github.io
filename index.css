@@ -161,6 +161,11 @@ nav{
     /* width: 45%; */
 }
 
+.nav__links > .nav__link:first-of-type{
+    /* background: red; */
+    display: none;
+}
+
 .nav__link{
     display: flex;
     align-items: center;
