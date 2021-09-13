@@ -14,7 +14,7 @@
     overflow-x: hidden  ;
 }
 
-.eyes2{
+.sunandwave{
     position: absolute;
     width: 240px;
     height: 240px;
@@ -67,13 +67,13 @@
 }
 
 @media (max-width: 1300px) {
-    .eyes2, .fan, .circle, .footer1, .footer2{
+    .sunandwave, .fan, .circle, .footer1, .footer2{
         display: none;
     }
 }
 
 @media (max-width: 450px){
-    .eyes2{
+    .sunandwave{
         display: block;
         width: 119.63px;
         height: 85.98px;
@@ -119,7 +119,7 @@
 }
 
 @media (max-width: 350px){
-    .eyes2{
+    .sunandwave{
         top: 17%;
     }
 }
