@@ -14,12 +14,21 @@
     overflow-x: hidden  ;
 }
 
-.sunandwave{
+/* .sunandwave{
     position: absolute;
     width: 240px;
     height: 240px;
     right: 5%;
     top: 10%;
+} */
+
+.eyes{
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    /* left: 1417px; */
+    top: 132px;
+    right: 0%;
 }
 
 .fan{
@@ -66,8 +75,30 @@
     margin-right: 15%;
 }
 
+.ellipse2{
+    position: absolute;
+    width: 266px;
+    height: 266px;
+    left: 164px;
+    top: 514px;
+    background: #CEE3F8;
+    opacity: 0.5;
+    filter: blur(80px);
+}
+
+.ellipse1{
+    position: absolute;
+    width: 266px;
+    height: 266px;
+    left: 1270px;
+    top: 156px;
+    background: #CEE3F8;
+    opacity: 0.5;
+    filter: blur(80px);
+}
+
 @media (max-width: 1300px) {
-    .sunandwave, .fan, .circle, .footer1, .footer2{
+    .eyes, .fan, .circle, .footer1, .footer2, .ellipse1, .ellipse2{
         display: none;
     }
 }
@@ -173,10 +204,14 @@ nav{
 }
 
 .nav__link > a {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Epilogue', sans-serif;
     font-size: 18px;
+    text-decoration: underline;
+    color: black;
+}
 
-
+#link_icon{
+    margin-top: 10px;
 }
 
 .mobile__img{
@@ -234,15 +269,24 @@ nav{
     margin-bottom: 24px;
 }
 
+/* second hero header  */
+@media (max-width:450px)
+    {
+    .hero__header > h3:nth-child(2){
+        margin-top: -16px;
+    }
+}
+
 .hero__header > h3 > span{
     display: none;
 }
 
 .hero__subtitle{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 500;
+    /* font-family: 'Epilogue', sans-serif; */
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 400;
     font-size: 18px;
-    color: #363C49;
+    color: #232B34;
     margin-bottom: 63px;
 }
 
@@ -265,7 +309,7 @@ button{
     background: #04000C;
     border-radius: 4px;
     color: #fff;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Epilogue', sans-serif;
     cursor: pointer;
     border: none;
 }
@@ -330,7 +374,7 @@ button{
 }
 
 .feature > div > p{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Epilogue', sans-serif;
     font-weight: normal;
     font-size: 16px;
     color: #2B121B;
@@ -391,7 +435,10 @@ button{
 /* FOOTER */
 footer{
     background: #000;
-    min-height: 21.25em;
+    /* min-height: 21.25em; */
+    /* min-height: 400px; */
+    /* min-height: 12.8125em; */
+    height: 393px;
     color: white;
     display: flex;
     flex-direction: column;
@@ -399,10 +446,16 @@ footer{
     align-items: center;
 }
 
+@media (max-width: 450px) {
+    footer{
+        height: 12.8125em;
+    }
+}
+
 footer > p{
     margin-bottom: 2.5em;
     font-size: 18px;
-    font-family:'Open Sans', sans-serif ;
+    font-family:'Epilogue', sans-serif ;
     
 }
 
