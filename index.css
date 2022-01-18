@@ -1,5 +1,6 @@
 html {
 	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 
 :root {
@@ -67,11 +68,18 @@ nav {
 
 /* MAIN STYLES */
 main {
-	min-height: max-content;
-	padding: 5rem 0;
 	display: flex;
 	position: relative;
-	height: 90vh;
+	height: 80vh;
+	max-height: 70rem;
+	min-height: 40rem;
+	margin-bottom: 10rem;
+}
+
+@media screen and (max-height: 700px) {
+	main {
+		margin-top: 5rem;
+	}
 }
 
 .main__left {
@@ -88,7 +96,19 @@ main {
 
 .scroll-down {
 	display: flex;
+	text-decoration: none;
 	align-items: center;
+	color: var(--text-color);
+}
+
+@media screen and (max-width: 1000px) {
+	.scroll-down {
+		display: none;
+	}
+}
+
+.scroll-down:visited {
+	color: var(--text-color);
 }
 
 .scroll-down span {
@@ -125,9 +145,102 @@ main {
 .main__right-image-3 {
 	position: absolute;
 	top: 20%;
-	right: 0%;
+	right: 0;
 	transform: translateY(-20%);
 	height: 27rem;
+}
+
+.main__svg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+@media screen and (max-height: 775px) {
+	.main__svg {
+		right: -10vh;
+	}
+}
+
+.black-circle {
+	animation: pendulum 2s infinite ease-in-out;
+}
+
+.header-star {
+	animation: rotate 15s infinite ease-in-out;
+	transform-box: fill-box;
+	transform-origin: center;
+}
+
+.main__buttons {
+	align-self: flex-start;
+	display: flex;
+	justify-content: center;
+	margin: 3rem 0;
+}
+
+@media screen and (min-width: 1000px) {
+	.main__buttons {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	main {
+		flex-direction: column;
+		min-height: auto;
+		max-height: none;
+		height: auto;
+	}
+
+	.main__left {
+		justify-content: flex-start;
+		margin-top: 5rem;
+		margin-bottom: 3rem;
+		width: 100%;
+	}
+
+	.main__right {
+		height: 50vh;
+		min-height: 30rem;
+	}
+
+	.heading-text p {
+		margin-right: 1rem;
+		display: inline;
+	}
+
+	.scroll-down {
+		display: none;
+	}
+
+	.main__svg {
+		position: static;
+		transform: rotate(-90deg);
+	}
+
+	.anti-rotate {
+		transform: rotate(90deg);
+		transform-box: fill-box;
+		transform-origin: center;
+	}
+
+	.main__right-image-3 {
+		top: 10%;
+		height: 27vh;
+	}
+
+	.black-circle {
+		animation: none;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.heading-text p {
+		font-size: 4.5rem;
+	}
 }
 
 /* SECTION 1*/
@@ -500,6 +613,12 @@ footer {
 	}
 }
 
+@media screen and (min-height: 980px) {
+	footer {
+		margin-bottom: 15vh;
+	}
+}
+
 /* Button Styles */
 .btn {
 	background-color: #fff;
@@ -514,6 +633,11 @@ footer {
 	transition: all 0.2s;
 	display: flex;
 	align-items: center;
+	text-decoration: none;
+}
+
+.btn:visited {
+	color: var(--text-color);
 }
 
 .btn:hover {
@@ -585,4 +709,32 @@ footer {
 
 .rotate {
 	animation: rotate 20s infinite linear;
+}
+
+@keyframes pendulum {
+	0% {
+		transform: translateX(0);
+	}
+
+	50% {
+		transform: translateX(-7rem);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes responsive-pendulum {
+	0% {
+		transform: translateX(0);
+	}
+
+	50% {
+		transform: translateX(-1rem);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
 }
