@@ -43,6 +43,7 @@ nav {
 .nav__middle {
 	display: flex;
 	align-items: center;
+	gap: 2rem;
 }
 
 .nav__middle > button:first-of-type {
@@ -177,6 +178,7 @@ main {
 .main__buttons {
 	align-self: flex-start;
 	display: flex;
+	gap: 2rem;
 	justify-content: center;
 	margin: 3rem 0;
 }
@@ -588,6 +590,7 @@ footer {
 .footer__body {
 	display: flex;
 	justify-content: center;
+	gap: 2rem;
 }
 
 .footer__body > button:first-child {
