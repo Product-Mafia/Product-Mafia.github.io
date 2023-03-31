@@ -178,7 +178,13 @@
 				<div class="sectionOne__right">
 					<img src="./assets/phone.svg" alt="phone" />
 					<figure class="section__video-container">
-						<video class="section__video" autoplay loop preload="auto">
+						<video
+							class="section__video"
+							autoplay
+							loop
+							preload="auto"
+							id="video1"
+						>
 							<source src="./assets/videos/Board Demo.mp4" type="video/mp4" />
 							Your browser does not support the video tag.
 						</video>
@@ -203,7 +209,13 @@
 				<div class="sectionTwo__right">
 					<img src="./assets/phone.svg" alt="phone" />
 					<figure class="section__video-container">
-						<video class="section__video" autoplay loop preload="auto">
+						<video
+							class="section__video"
+							autoplay
+							loop
+							preload="auto"
+							id="video2"
+						>
 							<source
 								src="./assets/videos/Timetable Demo.mp4"
 								type="video/mp4"
@@ -226,7 +238,13 @@
 				<div class="sectionThree__right">
 					<img src="./assets/phone.svg" alt="phone" />
 					<figure class="section__video-container">
-						<video class="section__video" autoplay loop preload="auto">
+						<video
+							class="section__video"
+							autoplay
+							loop
+							preload="auto"
+							id="video3"
+						>
 							<source
 								src="./assets/videos/Resources Demo.mp4"
 								type="video/mp4"
@@ -249,7 +267,13 @@
 				<div class="sectionFour__right">
 					<img src="./assets/phone.svg" alt="phone" />
 					<figure class="section__video-container">
-						<video class="section__video" autoplay loop preload="auto">
+						<video
+							class="section__video"
+							autoplay
+							loop
+							preload="auto"
+							id="video4"
+						>
 							<source
 								src="./assets/videos/Venue Change Notification.mp4"
 								type="video/mp4"
@@ -301,4 +325,22 @@
 			</div>
 		</footer>
 	</body>
+
+	<script>
+		const videoElements = [
+			document.getElementById("video1"),
+			document.getElementById("video2"),
+			document.getElementById("video3"),
+			document.getElementById("video4")
+		];
+
+		for (let i = 0; i < videoElements.length; i++) {
+			videoElements[i].oncanplaythrough = () => {
+				videoElements[i].muted = true;
+				videoElements[i].play();
+				videoElements[i].pause();
+				videoElements[i].play();
+			};
+		}
+	</script>
 </html>
